@@ -1,0 +1,13 @@
+<%= form_for @article do |f| %>
+	<div style="padding-bottom:	20px;">
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</div>
+	<div style="padding-bottom:	20px;">
+	  <%= f.label :description %>
+	  <%= f.text_area :description %>
+	</div>
+	<div style="padding-bottom:	20px;">
+	  <%= f.submit "Submit Article" %>
+	</div>
+<% end %>
