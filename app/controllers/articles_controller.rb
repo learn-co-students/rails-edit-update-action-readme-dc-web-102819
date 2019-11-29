@@ -19,5 +19,26 @@ class ArticlesController < ApplicationController
     redirect_to article_path(@article)
   end
 
+
+#   def create
+#     @coupon = Coupon.new
+#     @coupon[:coupon_code] = params[:coupon][:coupon_code]
+#     @coupon[:store] = params[:coupon][:store]
+#     @coupon.save
+#     redirect_to coupon_path(@coupon)
+# end 
+
+
   # add edit and update methods here
+
+  def edit 
+    @article = Article.find(params[:id])
+  end 
+
+  def update
+    @article = Article.find(params[:id])
+    @article.update(title: params[:article][:title], description: params[:article][:description])
+    redirect_to article_path(@article)
+  end
+
 end
